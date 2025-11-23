@@ -1,0 +1,4 @@
+Version control means keeping track of every change made in a project. 
+It helps to go back to previous versions, work safely without losing progress, 
+and collaborate without overwriting anyone's work.
+Git makes development organized and secure.
