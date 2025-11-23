@@ -1,3 +1,10 @@
+#My info
+print("Name: Esha Sajjad Mirza")
+print("Enrolment: 01-136252-016")
+print("Program: BS(AI)-3A")
+print("Subject: Programming for Artificial Intelligence")
+
+
 #Greetings and User Info
 def GreetUser():
     print("---Welcome to GenZ Life Simulator---")
