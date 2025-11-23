@@ -94,6 +94,7 @@ def ChatLoop(user):
     print(" ___________________________________________________________")
     print("|type 'bye' to end                                          |")
     print("|type 'game' to play game                                   |")
+    print("|type 'outfit' to get different color combination of outfit |")
     print("|___________________________________________________________|")
     print()
     print(">>>>CHAT WITH ME BRO!<<<<")
@@ -111,7 +112,10 @@ def ChatLoop(user):
             else:
                 print("Aww okay, let's keep chatting ")
                 continue
-
+        if user_input=="outfit":
+            result = OutfitMatcher()
+            if result == -1:
+                return ChatLoop(user)
 
 
         print("Bot:", GetResponse(user_input))
@@ -154,6 +158,45 @@ def StartGame(user):
             print(">>> dont you have a life!?")
             print("    :(   ")
             return -1
+
+
+#MY Unique Feature
+import random
+
+def OutfitMatcher():
+    tops = ["Grey", "Black", "Brown", "White", "Maroon", "Beige", "Green", "Sky Blue","Navy Blue","Pink"]
+    bottoms = ["White", "Black", "Beige", "Denim Blue", "Grey", "Cream"]
+    shoes = ["White", "Black", "Brown", "Green", "Navy Blue", "Grey","Red"]
+
+    top = random.choice(tops)
+    bottom = random.choice(bottoms)
+    shoe = random.choice(shoes)
+
+    print("\n---Outfit Matcher---")
+    print(f" Top: {top}")
+    print(f" Bottom: {bottom}")
+    print(f" Shoes: {shoe}")
+
+    if top == bottom:
+        print("Twin vibes detected — monochrome slay")
+    else:
+        print("...............................................")
+        vibe_comments = [
+            "Vibe check",
+            "Main character energy unlocked",
+            "This outfit eats and leaves no crumbs",
+            "Bro dropped this like it’s a movie trailer",
+            "Who allowed you to look this good for free?",
+            "This belongs in a museum",
+            "Fashion police could never",
+            "This combo? Pure aesthetic",
+            "Drip level: MAX",
+            "Aesthetic Man"
+        ]
+        print(random.choice(vibe_comments))
+        print("...............................................")
+        return -1
+
 
 
 
